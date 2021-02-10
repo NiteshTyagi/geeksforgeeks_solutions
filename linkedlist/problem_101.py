@@ -32,7 +32,7 @@ class Linklist(Linklist):
         
 
 if __name__ == "__main__":
-
+    #    https://www.geeksforgeeks.org/make-middle-node-head-linked-list/
     ll1 = Linklist()
     ll1.pushEnd(1)
     ll1.pushEnd(2)
