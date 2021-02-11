@@ -8,6 +8,28 @@ class circularLinkedList:
     def __init__(self):
         self.head = None
 
+    def deletenode(self,val:int):
+        prev = self.head
+        curr = self.head
+
+        while curr.next!=self.head:
+            if curr.val == val:
+                if prev.val==val: # For First Node to be delete
+                    temp = self.head
+                    while(temp.next!=self.head):
+                        temp = temp.next
+                    temp.next = curr.next
+                    self.head = curr.next
+                    return self.head
+
+                prev.next = curr.next
+                return self.head
+            prev = curr
+            curr = curr.next
+
+        if curr.next == self.head: # For last node to be delete
+            prev.next = self.head
+            return self.head
 
     def pushFront(self,val:int):
         node = Node(val)
@@ -43,7 +65,7 @@ class circularLinkedList:
         if position==0:
             return self.pushFront(val)
             
-        count = 0
+        count = 1
         temp = self.head
         while(temp.next!=self.head):
             if count==position:
@@ -88,5 +110,7 @@ if __name__=='__main__':
     cl.printCircularList()
 
     cl.pushAtposition(10,0)
+    cl.printCircularList()
 
+    cl.deletenode(10)
     cl.printCircularList()
