@@ -32,6 +32,7 @@ def getJosephusPosition(m, n):
 
 
 if __name__ == '__main__':
+    # https://www.geeksforgeeks.org/josephus-circle-using-circular-linked-list/
     n = 14
     m = 2
     getJosephusPosition(m, n)
