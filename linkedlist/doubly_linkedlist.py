@@ -44,7 +44,7 @@ class DoublyLinkedList:
             print('<----- No node exist in Linked List ----->')
             return
         prev_node = next_node.prev
-        if prev_node:
+        if prev_node and prev_node.next:
             prev_node.next = node
             node.prev = prev_node
             node.next = next_node
@@ -63,13 +63,11 @@ class DoublyLinkedList:
         if prev_node is None:
             print('<----- No node exist in Linked List ----->')
             return
-
         node.next = prev_node.next
         node.prev = prev_node
-        prev_node.next = node
         if prev_node.next:
             prev_node.next.prev = node
-
+        prev_node.next = node
         return node
 
     def printList(self):
@@ -95,11 +93,11 @@ if __name__ == '__main__':
 
     dl.pushEnd(10)
     afternode = dl.pushEnd(7)
-    beforenode = dl.pushEnd(9)
+    dl.pushEnd(9)
 
     dl.printList()
 
-    dl.pushAfternode(19,afternode)
+    beforenode = dl.pushAfternode(19,afternode)
 
     dl.printList()
 
