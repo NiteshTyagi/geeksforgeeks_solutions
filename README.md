@@ -6,3 +6,5 @@ This repo content solutions of problems listed on GeeksForGeeks
 #Sorting  -----> https://www.geeksforgeeks.org/sorting-algorithms/
 
 #BitManipulation -----> https://www.geeksforgeeks.org/bitwise-algorithms/
+
+#Mathematical_Problems --> https://www.geeksforgeeks.org/mathematical-algorithms/
