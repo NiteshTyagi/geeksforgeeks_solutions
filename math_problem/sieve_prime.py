@@ -1,4 +1,6 @@
 def sieve_eratosthenes(start,end):
+    # Time complexity is O(n*log(log(n)))
+
     result = [[i,True] for i in range(end+1)]
     p=2
     while p*p<=end:
