@@ -38,28 +38,28 @@ class GraphByAdjMatrix:
     def print_edges(self):
         print('Edges--->>>',self.graph)
 
+if __name__ =='__main__':
+    g=GraphByAdjMatrix()
+    g.add_vertices(0)
+    g.add_vertices(1)
+    g.add_vertices(2)
 
-g=GraphByAdjMatrix()
-g.add_vertices(0)
-g.add_vertices(1)
-g.add_vertices(2)
+    g.add_edge(1, 2)
+    g.add_edge(2, 0)
+    g.add_edge(28, 0)
 
-g.add_edge(1, 2)
-g.add_edge(2, 0)
-g.add_edge(28, 0)
+    g.print_vertices()
+    g.print_edges()
 
-g.print_vertices()
-g.print_edges()
+    g.add_vertices(3)
+    g.add_vertices(4)
+    g.add_vertices(5)
+    g.add_vertices(6)
 
-g.add_vertices(3)
-g.add_vertices(4)
-g.add_vertices(5)
-g.add_vertices(6)
-
-g.add_edge(6, 2)
-g.add_edge(5, 3)
-g.print_vertices()
-g.print_edges()
+    g.add_edge(6, 2)
+    g.add_edge(5, 3)
+    g.print_vertices()
+    g.print_edges()
 
 
 
@@ -98,27 +98,27 @@ class GraphByAdjList:
             print('-------Vertices  >>>>>>',vertice)
 
 
+if __name__ =='__main__':
 
+    print('=====================================================')
+    g=GraphByAdjList()
+    g.add_vertices(0)
+    g.add_vertices(1)
+    g.add_vertices(2)
 
-print('=====================================================')
-g=GraphByAdjList()
-g.add_vertices(0)
-g.add_vertices(1)
-g.add_vertices(2)
+    g.add_edge(1, 2)
+    g.add_edge(2, 0)
+    g.add_edge(28, 0)
 
-g.add_edge(1, 2)
-g.add_edge(2, 0)
-g.add_edge(28, 0)
+    g.print_vertices()
+    g.print_edges()
 
-g.print_vertices()
-g.print_edges()
+    g.add_vertices(3)
+    g.add_vertices(4)
+    g.add_vertices(5)
+    g.add_vertices(6)
 
-g.add_vertices(3)
-g.add_vertices(4)
-g.add_vertices(5)
-g.add_vertices(6)
-
-g.add_edge(6, 2)
-g.add_edge(5, 3)
-g.print_vertices()
-g.print_edges()
+    g.add_edge(6, 2)
+    g.add_edge(5, 3)
+    g.print_vertices()
+    g.print_edges()
