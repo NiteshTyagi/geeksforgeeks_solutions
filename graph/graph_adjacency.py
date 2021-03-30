@@ -82,13 +82,14 @@ class GraphByAdjList:
             v:[],
         })
 
-    def add_edge(self,src:int,dest:int):
+    def add_edge(self,src:int,dest:int,weight:1):
         if src not in self.graph or dest not in self.graph:
             print('-------Either Source or destination vertices are not in graph---------')
             return None
+            
 
-        self.graph[src].append(dest)
-        self.graph[dest].append(src)
+        self.graph[src].append([dest,weight])
+        # self.graph[dest].append([src,weight])
 
     def print_edges(self):
         print('----EDGES-------',self.graph)
@@ -106,9 +107,9 @@ if __name__ =='__main__':
     g.add_vertices(1)
     g.add_vertices(2)
 
-    g.add_edge(1, 2)
-    g.add_edge(2, 0)
-    g.add_edge(28, 0)
+    g.add_edge(1, 2,weight=5)
+    g.add_edge(2, 0,weight=6)
+    g.add_edge(28, 0,weight=7)
 
     g.print_vertices()
     g.print_edges()
@@ -118,7 +119,7 @@ if __name__ =='__main__':
     g.add_vertices(5)
     g.add_vertices(6)
 
-    g.add_edge(6, 2)
-    g.add_edge(5, 3)
+    g.add_edge(6, 2,weight=3)
+    g.add_edge(5, 3,weight=1)
     g.print_vertices()
     g.print_edges()
