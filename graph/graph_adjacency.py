@@ -82,7 +82,7 @@ class GraphByAdjList:
             v:[],
         })
 
-    def add_edge(self,src:int,dest:int,weight:1):
+    def add_edge(self,src:int,dest:int,weight=1):
         if src not in self.graph or dest not in self.graph:
             print('-------Either Source or destination vertices are not in graph---------')
             return None
